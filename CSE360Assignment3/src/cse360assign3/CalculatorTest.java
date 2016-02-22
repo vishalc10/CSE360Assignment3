@@ -81,7 +81,12 @@ public class CalculatorTest {
 	public void testGetHistory() {
 		Calculator myCal5 = new Calculator();
 		myCal5.add(10);
-		assertSame(myCal5.getHistory(), "");
+		myCal5.add(10);
+		myCal5.subtract(5);
+		myCal5.multiply(2);
+		myCal5.divide(2);
+		System.out.println(myCal5.getHistory());
+		assertEquals(myCal5.getHistory(), "0 + 10 + 10 - 5 * 2 / 2");
 		
 	}
 
