@@ -25,38 +25,64 @@ public class CalculatorTest {
 	/* Test method for correct total */
 	@Test
 	public void testGetTotal() {
-		fail("Not Yet Implemented");
+		
+		Calculator myCalculator = new Calculator();
+		assertEquals("getTotal method returns 0", myCalculator.getTotal(),0);
+				
 	}
 
 	/* Test method for addition */
 	@Test
 	public void testAdd() {
-		fail("Not Yet Implemented");
+		
+		Calculator myCal1 = new Calculator();
+		myCal1.add(10);
+		assertEquals("Add method adds 10", myCal1.getTotal(), 10);
+		
 	}
 
 	/* Test method for subtraction */
 	@Test
 	public void testSubtract() {
-		fail("Not Yet Implemented");
+		
+		Calculator myCal2 = new Calculator();
+		myCal2.add(10);
+		myCal2.subtract(3);
+		assertEquals("Add method subtracts 10", myCal2.getTotal(), 7);
+		
 	}
 
 	/* Test method for multiplication */
 	@Test
 	public void testMultiply() {
-		fail("Not Yet Implemented");
+		
+		Calculator myCal3 = new Calculator();
+		myCal3.add(10);
+		myCal3.multiply(2);
+		assertEquals("Add method adds 10", myCal3.getTotal(), 20);
+		
 	}
 
 	/* Test method for division */
 	@Test
 	public void testDivide() {
-		fail("Not Yet Implemented");
+		
+		Calculator myCal4 = new Calculator();
+		myCal4.add(10);
+		myCal4.divide(5);
+		assertEquals("Add method adds 10", myCal4.getTotal(), 2);
+		myCal4.divide(0);
+		assertEquals("Add method adds 10", myCal4.getTotal(), 0);
+		
 	}
 
 	/* Test method for getting history of operations */
 	@Test
 	public void testGetHistory() {
-		fail("Not Yet Implemented");
+		Calculator myCal5 = new Calculator();
+		myCal5.add(10);
+		assertSame(myCal5.getHistory(), "");
+		
 	}
 
 }
-
